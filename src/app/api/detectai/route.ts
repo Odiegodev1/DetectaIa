@@ -8,7 +8,7 @@ export async function POST(req: Request) {
     headers: {
       'Content-Type': 'application/json',
       'x-rapidapi-host': 'ai-content-detector-ai-gpt.p.rapidapi.com',
-      'x-rapidapi-key': '479f01ec99mshda31a70cfec808dp1d38abjsnaa46629228c9',
+      'x-rapidapi-key': `${process.env.RAPIDAPI_KEY}`, // Certifique-se de definir essa variável de ambiente
     },
     body: JSON.stringify({ text: body.text }),
   });

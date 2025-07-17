@@ -103,7 +103,7 @@ export function DetectaIaContent({ onResultado }: Props) {
     formData.append("image", file);
 
     try {
-      const res = await fetch("/api/detectIaImg", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/detectIaImg`, {
         method: "POST",
         body: formData,
       });

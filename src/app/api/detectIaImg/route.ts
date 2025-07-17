@@ -15,7 +15,7 @@ export async function POST(req: Request) {
     headers: {
       // NÃO coloque Content-Type aqui, o fetch define automaticamente para multipart/form-data com boundary
       'x-rapidapi-host': 'image-to-text30.p.rapidapi.com',
-      'x-rapidapi-key': '479f01ec99mshda31a70cfec808dp1d38abjsnaa46629228c9',
+      'x-rapidapi-key': `${process.env.RAPIDAPI_KEY}`, // Certifique-se de definir essa variável de ambiente
     },
     body: externalFormData as any, // no Node fetch isso funciona
   });
